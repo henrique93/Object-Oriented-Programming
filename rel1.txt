@@ -1,0 +1,11 @@
+O core é constituido por 6 classes
+- FSManager é a classe que comunica com o exterior, usa as outras classes para realizar certas tarefas fornecendo-lhes os parâmetros
+necessários para o fazer, guarda o FileSystem actual, o utilizador actual e o directório actual.
+- FileSystem é a classe que realizar todas as tarefas que o FSManager não consegue realizar, para além de guardar o directório "/" e todos os
+utilizadores criados. Os utilizadores são guardados num treemap, este mapa guarda o utilizador e associa-lhe uma chave, neste caso está
+associado a cada utilizador o seu username para assim facilitar a procura de utilizadores no mapa.
+- Entry é a super classe de File e Directory, todas as entradas têm um nome, um dono, e podem ser públicas ou privadas.
+- Directory é uma sub-classe de Entry que guarda o directório onde foi criado (Directory parent) e guarda todas as entradas que nele são criadas
+num treemap, neste mapa a cada entrada está associado o seu nome.
+- File é uma sub-classe de Entry que guarda o seu conteúdo (text) em string.
+- User é uma classe que guarda o seu nome e username.
